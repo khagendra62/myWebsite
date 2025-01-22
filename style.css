@@ -12,18 +12,14 @@ body {
   position: sticky;
   top: 0px;
   display: flex;
-  /* flex-direction: row; */
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
   background-color: #333;
   color: #fff;
+  height: 50px;
   z-index: 1000;
 }
-
-/* .navbar:hover{
-  opacity: 0%;
-} */
 
 .logo a {
   font-size: 24px;
@@ -46,14 +42,15 @@ body {
   padding: 10;
 }
 
-.nav-links a {
+.nav-links span {
   text-decoration: none;
   color: #fff;
   font-size: 16px;
   transition: color 0.3s ease;
+  cursor: pointer;
 }
 
-.nav-links a:hover {
+.nav-links span:hover {
   color: #ff9800;
 }
 
@@ -70,106 +67,20 @@ body {
   font-size: 16px;
   cursor: pointer;
   transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.signup {
   background-color: #ff9800;
   color: #fff;
 }
 
-.signup:hover {
+.btn:hover {
   background-color: #fff;
   color: #ff9800;
   transform: scale(1.1);
 }
 
-.login {
-  background-color: transparent;
-  border: 2px solid #fff;
-  color: #fff;
-}
-
-.login:hover {
-  background-color: #fff;
-  color: #333;
-  transform: scale(1.1);
-}
-
-/* Popup Styles */
-.popup-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.popup {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  width: 300px;
-}
-
-.popup h2 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.popup button.resetBtn {
-  width: 30px;
-}
-
-.popup input {
-  width: 90%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.popup button {
-  width: 100%;
-  padding: 10px;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.popup button:hover {
-  background-color: #ff9800;
-  transform: scale(1.05);
-}
-
-.register {
-  background-color: #f9f9f9;
-}
-
-/*  hero section */
-
-/* .heroPic{
-  width: 100vw;
-  height: 100vh;
-  margin: 0px; 
-}  */
-
 /* About me   */
 
 /* About Me Section Styling */
 .about-me {
-  /* position: relative;  */
   background-color: #222;
   color: #fff;
   padding: 50px 0;
@@ -178,21 +89,24 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-/* Container for centered content */
+/* Container for all sections */
 .container {
-  max-width: 1200px;
+  min-height: calc(100vh - 70px);
+  padding: 70px 20px 0 20px;
+}
+
+.about-content {
   margin: 0 auto;
-  padding: 0 20px;
+  max-width: 1200px;
 }
 
 /* Styling for the heading */
 .about-content h1 {
-  font-size: 3.5em;
+  font-size: 56px;
   font-weight: 700;
   color: #ff9800;
   margin-bottom: 20px;
-  /* position: relative; */
-  animation: fadeIn 2s ease-in-out;
+  animation: fadeIn 0.75s ease-in-out;
 }
 
 .about-content h1::after {
@@ -212,11 +126,11 @@ body {
 
 /* Styling for the introduction paragraph */
 .intro {
-  font-size: 1.2em;
+  font-size: 20px;
   margin: 20px 0;
   opacity: 0;
-  animation: fadeIn 2.5s ease-in-out forwards;
-  animation-delay: 0.51s;
+  animation: fadeIn 0.75s ease-in-out forwards;
+  animation-delay: 0.25s;
 }
 
 .name {
@@ -226,11 +140,11 @@ body {
 
 /* Details paragraph */
 .details {
-  font-size: 30px;
+  font-size: 26px;
   margin-bottom: 30px;
   opacity: 0;
-  animation: fadeIn 3s ease-in-out forwards;
-  animation-delay: 2s;
+  animation: fadeIn 0.5s ease-in-out forwards;
+  animation-delay: 0.5s;
 }
 
 /* Skills section */
@@ -239,8 +153,8 @@ body {
   font-weight: 500;
   color: #ff9800;
   opacity: 0;
-  animation: fadeIn 3.5s ease-in-out forwards;
-  animation-delay: 2.5s;
+  animation: fadeIn 0.5s ease-in-out forwards;
+  animation-delay: 0.5s;
 }
 
 /* Hover effect for details */
@@ -262,28 +176,26 @@ body {
 
 /* CONTACT */
 .contact-section {
-  margin: 0;
-  padding: 0;
   background-color: #1c1c1c; /* Darker black shade */
   color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
   overflow: hidden;
+  padding-top: 100px;
+}
+
+.contact-content {
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
 /* Heading Style */
 .contact-section h2 {
   font-size: 50px;
+  text-align: center;
   margin-top: 10px;
   margin-bottom: 30px;
   text-transform: uppercase;
-  letter-spacing: 10px;
+  letter-spacing: 8px;
   color: #ff9800;
-  animation: fadeIn 1s ease-in-out;
   position: relative;
 }
 
@@ -294,7 +206,12 @@ body {
   height: 3px;
   background-color: #ff9800;
   margin: 10px auto;
-  animation: slideIn 1.5s ease-in-out;
+}
+
+.contact-text {
+  font-size: 24px;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 /* Links Container */
@@ -374,5 +291,42 @@ body {
 }
 
 .copyright {
-  font-size: 30px;
+  font-size: 16px;
+}
+
+/* Styles for mobile screen */
+@media screen and (max-width: 767px) {
+  .nav-links {
+    display: none;
+  }
+
+  .about-content {
+    padding-bottom: 10px;
+  }
+
+  .about-content h1 {
+    font-size: 36px;
+  }
+
+  .details {
+    font-size: 20px;
+  }
+
+  .skills {
+    font-size: 20px;
+  }
+
+  .contact-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .contact-section h2 {
+    font-size: 32px;
+    letter-spacing: normal;
+  }
+
+  .contact-text {
+    font-size: 20px;
+  }
 }

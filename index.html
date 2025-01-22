@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Khagendra's Portfolio</title>
+    <title>Khagendra Awasthi</title>
     <link rel="stylesheet" href="style.css" />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -13,98 +13,90 @@
 
   <body>
     <nav class="navbar">
-      <div class="logo"><a href="index.html">Khagendra</a></div>
+      <div class="logo"><a href="index.html">Home</a></div>
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#project">Project</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li>
-          <a href="Assets/resume.pdf" download="Khagendra_Resume.pdf"
-            >Download My resume</a
-          >
-        </li>
+        <li><span onclick="goToSection('about')">About</span></li>
+        <li><span onclick="goToSection('projects')">Projects</span></li>
+        <li><span onclick="goToSection('contact')">Contact</span></li>
       </ul>
       <div class="nav-buttons">
-        <button class="btn signup" onclick="popup('register-popup')">
-          Sign-up
-        </button>
-        <button class="btn login" onclick="popup('login-popup')">Login</button>
+        <button class="btn" onclick="getResume()">Get Resume</button>
       </div>
     </nav>
 
     <!-- ABOUT ME  -->
-    <section id="about" class="about-me">
-      <div class="container">
-        <div class="about-content">
-          <h1>About Me</h1>
-          <p class="intro">
-            Hello! I'm <span class="name">Khagendra</span>, a passionate web
-            developer with a love for technology and innovation.
-          </p>
-          <p class="details">
-            From coding intricate algorithms to designing seamless user
-            experiences, I immerse myself in every detail of my work. With a
-            blend of creativity, precision, and a constant thirst for learning,
-            I strive to push boundaries and challenge the norm.
-          </p>
-          <p class="skills">
-            <strong>Skills & Expertise:</strong> Web Development, UI/UX Design,
-            Problem-Solving Skills, Creative Design and Other Technical Skills
-          </p>
-        </div>
+    <section id="about" class="about-me container">
+      <div class="about-content">
+        <h1>About Me</h1>
+        <p class="intro">
+          Hello! I'm <span class="name">Khagendra Awasthi</span>, a passionate
+          web developer with a love for technology and innovation.
+        </p>
+        <p class="details">
+          From coding intricate algorithms to designing seamless user
+          experiences, I immerse myself in every detail of my work. With a blend
+          of creativity, precision, and a constant thirst for learning, I strive
+          to push boundaries and challenge the norm.
+        </p>
+        <p class="skills">
+          <strong>Skills & Expertise:</strong> Frontend Development, Backend
+          Development, Database Design, Deployment.
+        </p>
       </div>
     </section>
 
-    <section id="contact" class="contact-section">
-      <h2>Contact Me</h2>
-      <div class="contact-links">
-        <a
-          href="https://www.linkedin.com/in/khagendra-awasthi-a55359317/"
-          target="_blank"
-          class="contact-link"
-        >
-          <i class="fab fa-linkedin"></i>
-          <label class="linkedin">LinkedIn</label>
-        </a>
-        <a
-          href="https://github.com/khagendra62"
-          target="_blank"
-          class="contact-link"
-        >
-          <i class="fab fa-github"></i> <label class="github">GitHub</label>
-        </a>
-        <a
-          href="https://x.com/khagendra62"
-          target="_blank"
-          class="contact-link"
-        >
-          <i class="fab fa-twitter"></i>
-          <label class="twitter">Twitter</label>
-        </a>
-        <a
-          href="https://www.facebook.com/khagendra2062/"
-          target="_blank"
-          class="contact-link"
-        >
-          <i class="fab fa-facebook"></i>
-          <label lass="facebook">Facebook</label>
-        </a>
-        <a
-          href="https://www.instagram.com/khagendraawasthi47/"
-          target="_blank"
-          class="contact-link"
-        >
-          <i class="fab fa-instagram"></i>
-          <label class="instagram">Instagram</label>
-        </a>
-        <a href="mailto:khagendaawasthi47@gmail.com" class="contact-link">
-          <i class="fas fa-envelope"></i> <label class="Gmail">gmail</label>
-        </a>
-        <a href="tel:+9779865709937" class="contact-link">
-          <i class="fas fa-phone"></i>
-          <label class="phone">+977-9865709937</label>
-        </a>
+    <section id="contact" class="contact-section container">
+      <div class="contact-content">
+        <h2>Contact Me</h2>
+        <p class="contact-text">
+          Feel free to reach out or connect with me through any of the platforms
+          below to collaborate, share ideas, discuss opportunities, or simply
+          stay in touch.
+        </p>
+        <div class="contact-links">
+          <a
+            href="https://www.linkedin.com/in/khagendra-awasthi-a55359317/"
+            target="_blank"
+            class="contact-link"
+          >
+            <i class="fab fa-linkedin"></i>
+            <label class="linkedin">LinkedIn</label>
+          </a>
+          <a
+            href="https://github.com/khagendra62"
+            target="_blank"
+            class="contact-link"
+          >
+            <i class="fab fa-github"></i> <label class="github">GitHub</label>
+          </a>
+          <a
+            href="https://x.com/khagendra62"
+            target="_blank"
+            class="contact-link"
+          >
+            <i class="fab fa-twitter"></i>
+            <label class="twitter">Twitter</label>
+          </a>
+          <a
+            href="https://www.facebook.com/khagendra2062/"
+            target="_blank"
+            class="contact-link"
+          >
+            <i class="fab fa-facebook"></i>
+            <label lass="facebook">Facebook</label>
+          </a>
+          <a
+            href="https://www.instagram.com/khagendraawasthi47/"
+            target="_blank"
+            class="contact-link"
+          >
+            <i class="fab fa-instagram"></i>
+            <label class="instagram">Instagram</label>
+          </a>
+          <a href="mailto:khagendaawasthi47@gmail.com" class="contact-link">
+            <i class="fas fa-envelope"></i> <label class="Email">Email</label>
+          </a>
+        </div>
       </div>
     </section>
 
@@ -113,5 +105,7 @@
         <p>&copy; 2025 Khagendra. All rights reserved.</p>
       </div>
     </footer>
+
+    <script src="./script.js"></script>
   </body>
 </html>
