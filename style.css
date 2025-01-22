@@ -1,0 +1,332 @@
+/* NAV BAR  */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  box-sizing: border-box;
+}
+
+/* Navbar Styles */
+.navbar {
+  position: sticky;
+  top: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  height: 50px;
+  z-index: 1000;
+}
+
+.logo a {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.logo a:hover {
+  transform: scale(1.1);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 80px;
+  flex-direction: row;
+  margin: 0;
+  padding: 10;
+}
+
+.nav-links span {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.nav-links span:hover {
+  color: #ff9800;
+}
+
+/* Button Styles */
+.nav-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  background-color: #ff9800;
+  color: #fff;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #ff9800;
+  transform: scale(1.1);
+}
+
+/* About me   */
+
+/* About Me Section Styling */
+.about-me {
+  background-color: #222;
+  color: #fff;
+  padding: 50px 0;
+  text-align: center;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Container for all sections */
+.container {
+  min-height: calc(100vh - 70px);
+  padding: 70px 20px 0 20px;
+}
+
+.about-content {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* Styling for the heading */
+.about-content h1 {
+  font-size: 56px;
+  font-weight: 700;
+  color: #ff9800;
+  margin-bottom: 20px;
+  animation: fadeIn 0.75s ease-in-out;
+}
+
+.about-content h1::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 3px;
+  background-color: #ff9800;
+  margin: 10px auto;
+  transition: all 0.3s ease;
+}
+
+.about-content h1:hover::after {
+  width: 100%;
+  background-color: #fff;
+}
+
+/* Styling for the introduction paragraph */
+.intro {
+  font-size: 20px;
+  margin: 20px 0;
+  opacity: 0;
+  animation: fadeIn 0.75s ease-in-out forwards;
+  animation-delay: 0.25s;
+}
+
+.name {
+  font-weight: bold;
+  color: #ff9800;
+}
+
+/* Details paragraph */
+.details {
+  font-size: 26px;
+  margin-bottom: 30px;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards;
+  animation-delay: 0.5s;
+}
+
+/* Skills section */
+.skills {
+  font-size: 25px;
+  font-weight: 500;
+  color: #ff9800;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards;
+  animation-delay: 0.5s;
+}
+
+/* Hover effect for details */
+.about-me:hover {
+  background-color: #111;
+}
+
+/* Animation for text fade-in */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* CONTACT */
+.contact-section {
+  background-color: #1c1c1c; /* Darker black shade */
+  color: #fff;
+  overflow: hidden;
+  padding-top: 100px;
+}
+
+.contact-content {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* Heading Style */
+.contact-section h2 {
+  font-size: 50px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  color: #ff9800;
+  position: relative;
+}
+
+.contact-section h2::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 3px;
+  background-color: #ff9800;
+  margin: 10px auto;
+}
+
+.contact-text {
+  font-size: 24px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Links Container */
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Individual Links */
+.contact-link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 200px;
+  height: 50px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  background: linear-gradient(145deg, #333, #1a1a1a);
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8),
+    -3px -3px 10px rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+/* Hover Effect for Links */
+.contact-link:hover {
+  transform: translateY(-5px) scale(1.1);
+  background: linear-gradient(145deg, #ff9800, #ffcc66);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5),
+    -5px -5px 15px rgba(255, 255, 255, 0.1);
+  color: #000;
+}
+
+/* Icon Styles */
+.contact-link i {
+  font-size: 30px;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.contact-link:hover i {
+  transform: rotate(360deg);
+}
+
+/* Keyframes for Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100px;
+  }
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  padding: 10px;
+}
+
+.copyright {
+  font-size: 16px;
+}
+
+/* Styles for mobile screen */
+@media screen and (max-width: 767px) {
+  .nav-links {
+    display: none;
+  }
+
+  .about-content {
+    padding-bottom: 10px;
+  }
+
+  .about-content h1 {
+    font-size: 36px;
+  }
+
+  .details {
+    font-size: 20px;
+  }
+
+  .skills {
+    font-size: 20px;
+  }
+
+  .contact-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .contact-section h2 {
+    font-size: 32px;
+    letter-spacing: normal;
+  }
+
+  .contact-text {
+    font-size: 20px;
+  }
+}

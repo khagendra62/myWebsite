@@ -1,130 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Khagendra Awasthi</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Khagendra</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-      color: white;
-      font-family: Arial, sans-serif;
-      text-align: center;
-    }
+  <body>
+    <nav class="navbar">
+      <div class="logo"><a href="index.html">Home</a></div>
+      <ul class="nav-links">
+        <li><span onclick="goToSection('about')">About</span></li>
+        <li><span onclick="goToSection('projects')">Projects</span></li>
+        <li><span onclick="goToSection('contact')">Contact</span></li>
+      </ul>
+      <div class="nav-buttons">
+        <button class="btn" onclick="getResume()">Get Resume</button>
+      </div>
+    </nav>
 
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
+    <!-- ABOUT ME  -->
+    <section id="about" class="about-me container">
+      <div class="about-content">
+        <h1>About Me</h1>
+        <p class="intro">
+          Hello! I'm <span class="name">Khagendra Awasthi</span>, a passionate
+          web developer with a love for technology and innovation.
+        </p>
+        <p class="details">
+          From coding intricate algorithms to designing seamless user
+          experiences, I immerse myself in every detail of my work. With a blend
+          of creativity, precision, and a constant thirst for learning, I strive
+          to push boundaries and challenge the norm.
+        </p>
+        <p class="skills">
+          <strong>Skills & Expertise:</strong> Frontend Development, Backend
+          Development, Database Design, Deployment.
+        </p>
+      </div>
+    </section>
 
-    p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-    }
+    <section id="contact" class="contact-section container">
+      <div class="contact-content">
+        <h2>Contact Me</h2>
+        <p class="contact-text">
+          Feel free to reach out or connect with me through any of the platforms
+          below to collaborate, share ideas, discuss opportunities, or simply
+          stay in touch.
+        </p>
+        <div class="contact-links">
+          <a
+            href="https://www.linkedin.com/in/khagendra-awasthi-a55359317/"
+            target="_blank"
+            class="contact-link"
+          >
+            <i class="fab fa-linkedin"></i>
+            <label class="linkedin">LinkedIn</label>
+          </a>
+          <a
+            href="https://github.com/khagendra62"
+            target="_blank"
+            class="contact-link"
+          >
+            <i class="fab fa-github"></i> <label class="github">GitHub</label>
+          </a>
+          <a
+            href="https://x.com/khagendra62"
+            target="_blank"
+            class="contact-link"
+          >
+            <i class="fab fa-twitter"></i>
+            <label class="twitter">Twitter</label>
+          </a>
+          <a
+            href="https://www.facebook.com/khagendra2062/"
+            target="_blank"
+            class="contact-link"
+          >
+            <i class="fab fa-facebook"></i>
+            <label lass="facebook">Facebook</label>
+          </a>
+          <a
+            href="https://www.instagram.com/khagendraawasthi47/"
+            target="_blank"
+            class="contact-link"
+          >
+            <i class="fab fa-instagram"></i>
+            <label class="instagram">Instagram</label>
+          </a>
+          <a href="mailto:khagendaawasthi47@gmail.com" class="contact-link">
+            <i class="fas fa-envelope"></i> <label class="Email">Email</label>
+          </a>
+        </div>
+      </div>
+    </section>
 
-    .countdown {
-      display: flex;
-      gap: 1rem;
-      font-size: 2rem;
-      font-weight: bold;
-      margin-bottom: 2rem;
-    }
+    <footer class="footer">
+      <div class="copyright">
+        <p>&copy; 2025 Khagendra. All rights reserved.</p>
+      </div>
+    </footer>
 
-    .countdown div {
-      background: rgba(255, 255, 255, 0.2);
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .countdown span {
-      display: block;
-      font-size: 0.8rem;
-      margin-top: 0.5rem;
-      font-weight: normal;
-    }
-
-    .social-links {
-      /* margin-top: auto; */
-      display: flex;
-      gap: 1rem;
-    }
-
-    .social-links a {
-      color: white;
-      font-size: 1.5rem;
-      text-decoration: none;
-      transition: transform 0.2s ease, color 0.2s ease;
-    }
-
-    .social-links a:hover {
-      transform: scale(1.2);
-      color: #ffd700;
-    }
-  </style>
-</head>
-
-<body>
-  <h1>Stay tuned!</h1>
-  <p>My website is under construction and will be live shortly.</p>
-
-  <div class="countdown">
-    <div>
-      <span id="days">00</span>
-      <span>Days</span>
-    </div>
-    <div>
-      <span id="hours">00</span>
-      <span>Hours</span>
-    </div>
-    <div>
-      <span id="minutes">00</span>
-      <span>Minutes</span>
-    </div>
-    <div>
-      <span id="seconds">00</span>
-      <span>Seconds</span>
-    </div>
-  </div>
-
-  <div class="social-links">
-    <a href="#" target="_blank" class="fab fa-facebook"></a>
-    <a href="https://github.com/khagendra62" target="_blank" class="fab fa-github"></a>
-    <a href="#" target="_blank" class="fab fa-instagram"></a>
-    <a href="https://www.linkedin.com/in/khagendra-awasthi-a55359317/" target="_blank" class="fab fa-linkedin"></a>
-  </div>
-
-  <script>
-    // Countdown Timer Logic
-    const targetDate = new Date("2025-02-01T00:00:00").getTime();
-
-    function updateCountdown() {
-      const now = new Date().getTime();
-      const difference = targetDate - now;
-
-      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-      document.getElementById('days').textContent = String(days).padStart(2, '0');
-      document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-      document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-      document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
-    }
-
-    setInterval(updateCountdown, 1000);
-    updateCountdown();
-  </script>
-</body>
-
+    <script src="./script.js"></script>
+  </body>
 </html>
